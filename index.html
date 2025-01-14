@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    <div class="container mt-5 ">
+    <div class="container mt-5">
         <div class="row  rounded bg-body-tertiary">
             <div class="col-12  p-5">
                 <div class="d-flex  align-items-center">
@@ -59,6 +59,14 @@
                 <button type="button" class="btn btn-info btn-lg text-white fw-bold">Prenota ora</button>
             </div>
         </div>
+    </div>
+
+
+    <div class="container mt-5 d-flex justify-content-center align-items-center">
+        <a id="linkHideCard" href="" data-bs-toggle="collapse"
+            class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">
+            Nascondi tutte le card
+        </a>
     </div>
 
     <div class="container mt-4 position-relative">
@@ -339,11 +347,18 @@
     </div>
 
 
+
+
+
+
     <footer class="container-fluid bg-dark mt-5">
 
         <div class="row justify-content-center p-5">
-            <div class="col-12 text-center mb-4"> <button type="button"
-                    class="btn btn-secondary btn-lg">Contattaci</button></div>
+            <div class="col-12 text-center mb-4"> <button type="button" class="btn btn-secondary btn-lg"
+                    data-bs-toggle="modal" data-bs-target="#modalFooter">
+                    Contattaci
+                </button>
+            </div>
 
 
             <div class="col-12 text-center">
@@ -352,7 +367,39 @@
         </div>
     </footer>
 
-
+    <div class="modal fade" id="modalFooter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Contattaci</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Indirizzo email</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">Non condivideremo la tua mail con nessuno.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputMessage" class="form-label">Scrivi qui il tuo messaggio</label>
+                            <textarea class="form-control" id="exampleInputMessage" rows="4"
+                                placeholder="Inserisci il tuo messaggio..."></textarea>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Premi qui</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Invio!</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi finestra</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
